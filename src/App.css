@@ -1,0 +1,18 @@
+*{
+  background-color: rgb(200, 240, 226);
+}
+.quiz-container{
+  color: rgb(31, 28, 28);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 70%;
+  background-color: darkslategrey;
+
+}
+.app-container{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  background-color: darkslategrey;
+
+}
