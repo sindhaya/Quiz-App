@@ -2,16 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 const Quiz = () => {
   const [answer, setAnswer] = useState('');
-  const [timeLeft, setTimeLeft] = useState(10); // Initial time in seconds
+  const [timeLeft, setTimeLeft] = useState(10);
   const [isTimeUp, setIsTimeUp] = useState(false);
 
-  // Function to handle user's answer input
   const handleAnswerChange = (event) => {
     event.preventDefault()
     setAnswer(event.target.value);
   };
 
-  // Function to check if the answer is correct
   const checkAnswer = () => {
     if (answer.toLowerCase() === "paris") {
       clearTimeout();
@@ -21,14 +19,12 @@ const Quiz = () => {
     }
   };
 
-  // Function to show the answer if time is up
   const showAnswer = () => {
     setIsTimeUp(true);
     setAnswer("Paris");
     alert("Time's up! The answer is Paris.");
   };
 
-  // Countdown timer effect
   useEffect(() => {
     const timer = setInterval(() => {
       if (timeLeft === 0) {
